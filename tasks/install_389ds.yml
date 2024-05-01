@@ -130,7 +130,7 @@
         backend import
         {{ dirsrv_bename }}
         {{ dirsrv_install_additional_ldif_dir }}/{{ item|basename }}
-        --bind-pw {{ dirsrv_rootdn_password }}
+        -w {{ dirsrv_rootdn_password }}
       when:
         - not dirsrv_instance_dir_exists
         - not dirsrv_legacy
